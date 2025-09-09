@@ -1,6 +1,6 @@
 package Practica_1;
 
-class EcuaciónLineal {
+public class EcuaciónLineal {
     // Atributos privados
     private double a;
     private double b;
@@ -36,5 +36,3 @@ class EcuaciónLineal {
         }
     }
 }
-
-
