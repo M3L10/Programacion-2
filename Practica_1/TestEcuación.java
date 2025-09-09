@@ -2,6 +2,7 @@ package Practica_1;
 
 import java.util.Scanner;
 import java.util.Locale;
+
 public class TestEcuación {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,13 +14,14 @@ public class TestEcuación {
             double b = sc.nextDouble();
             double c = sc.nextDouble();
 
-            EcuacionLineal eq = new EcuaciónLineal(a, b, c);
+            // Crear objeto de la clase EcuaciónLineal (con acento)
+            EcuaciónLineal eq = new EcuaciónLineal(a, b, c);
             double discriminante = eq.getDiscriminante();
 
             if (discriminante > 0) {
-                System.out.println("La ecuación tiene dos raíces " + eq.getRaiz1() + " y " + eq.getRaiz2());
+                System.out.println("La ecuación tiene dos raíces: " + eq.getRaiz1() + " y " + eq.getRaiz2());
             } else if (discriminante == 0) {
-                System.out.println("La ecuación tiene una raíz " + eq.getRaiz1());
+                System.out.println("La ecuación tiene una raíz: " + eq.getRaiz1());
             } else {
                 System.out.println("La ecuación no tiene raíces reales");
             }
