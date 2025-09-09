@@ -1,10 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <title>Programación II – Portada</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="estilo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .practicas {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .practicas button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .practicas button:hover {
+      background-color: #45a049;
+    }
+
+    .files-list {
+      display: none;
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    }
+
+    .files-list li {
+      margin: 5px 0;
+    }
+
+    .files-list a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.2s;
+    }
+
+    .files-list a:hover {
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
   <h1>📘 Programación II</h1>
@@ -20,10 +88,35 @@
   </div>
 
   <h2>📝 Prácticas</h2>
-  <ul>
-    <li><a href="./Practica_1/index.html">Práctica 1</a></li>
-    <li><a href="./Practica_2/index.html">Práctica 2</a></li>
-    <li><a href="./Practica_3/index.html">Práctica 3</a></li>
+  <div class="practicas">
+    <button onclick="toggleFiles('Practica_1')">Práctica 1</button>
+    <button onclick="toggleFiles('Practica_2')">Práctica 2</button>
+    <button onclick="toggleFiles('Practica_3')">Práctica 3</button>
+  </div>
+
+  <ul id="Practica_1" class="files-list">
+    <li><a href="./Practica_1/EcuacionLineal.java">EcuacionLineal.java</a></li>
+    <li><a href="./Practica_1/TestEcuación.java">TestEcuación.java</a></li>
+    <li><a href="./Practica_1/EcuaciónLineal.java">EcuaciónLineal</a></li>
+    <li><a href="./Practica_1/TestEcuación.java">TestEcuación</a></li>
+    <li><a href="./Practica_1/Estadistica.java">Estadistica</a></li>
+    <li><a href="./Practica_1/TestEstadistica.java">TestEcuación</a></li>
   </ul>
+
+  <ul id="Practica_2" class="files-list">
+    <li><a href="./Practica_2/Archivo1.java">Archivo1.java</a></li>
+    <li><a href="./Practica_2/Archivo2.java">Archivo2.java</a></li>
+  </ul>
+
+  <ul id="Practica_3" class="files-list">
+    <!-- Vacía por ahora -->
+  </ul>
+
+  <script>
+    function toggleFiles(id) {
+      const list = document.getElementById(id);
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
