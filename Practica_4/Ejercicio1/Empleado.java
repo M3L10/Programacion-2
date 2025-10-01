@@ -1,0 +1,13 @@
+package Practica_4.Ejercicio1;
+
+public abstract class Empleado {
+	public String nombre;
+	public Empleado(String nombre) {
+		this.nombre=nombre;
+	}
+	public abstract double CalcularSalarioMensual();
+	@Override
+	public String toString() {
+		return "nombre= " + nombre ;
+	}	
+}
